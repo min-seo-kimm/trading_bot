@@ -7,13 +7,13 @@ from datetime import datetime
 def initialize_logger():
     
     # Create a folder for all the logs
-    logs_path = './logs/'
+    logs_path = './logs/' # Define the path
     try:
         os.mkdir(logs_path)
     except OSError:
-        print("Creation of directory %s failed - the directory already exists" % logs_path)
+        print('Creation of directory %s failed - the directory already exists' % logs_path)
     else:
-        print("Successfully created log directory")
+        print('Successfully created log directory')
 
     # Rename each log depending on the time
     date = datetime.now().strftime('%Y%m%d_%H%M%S')
