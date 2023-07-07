@@ -5,7 +5,6 @@ import logging as lg
 import os
 
 def initialize_logger():
-    
     # Create a folder for all the logs
     logs_path = './logs/' # Define the path
     try:
