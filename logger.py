@@ -1,8 +1,8 @@
 # encoding: utf-8
 
+from datetime import datetime
 import logging as lg
 import os
-from datetime import datetime
 
 def initialize_logger():
     
@@ -21,7 +21,7 @@ def initialize_logger():
     current_log_path = logs_path + log_name
     
     # Log parameters
-    lg.basicConfig(filename=current_log_path, format='%(asctime)s - %(levelname)s: %(message)s', level=lg.DEBUG)
+    lg.basicConfig(filename=current_log_path, format='%(asctime)s - %(levelname)s: %(message)s', level=lg.INFO)
     lg.getLogger().addHandler(lg.StreamHandler())
 
     # Init message
