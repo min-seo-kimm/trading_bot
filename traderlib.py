@@ -227,7 +227,7 @@ class Trader:
         try:
             while True:
                 # Ask for 30 min candles
-                data = self.load_historical_data(ticker, interval='30m', period='5d')
+                data = self.load_historical_data(ticker, interval='30m', period='1mo')
 
                 # Calculate the EMAs
                 ema9 = ti.ema(data.Close.values, 9)[-1]
@@ -264,8 +264,8 @@ class Trader:
         try:
             while True:
                 # Ask for 5 min candles
-                data = self.load_historical_data(ticker, interval='5m', period='1d')
-
+                data = self.load_historical_data(ticker, interval='5m', period='5d')
+                
                 # Calculate the EMAs
                 ema9 = ti.ema(data.Close.values, 9)[-1]
                 ema26 = ti.ema(data.Close.values, 26)[-1]
@@ -301,7 +301,7 @@ class Trader:
         try:
             while True:
                 # Ask for 5 min candles
-                data = self.load_historical_data(ticker, interval='5m', period='1d')
+                data = self.load_historical_data(ticker, interval='5m', period='5d')
 
                 # Calculate the RSI
                 rsi = ti.rsi(data.Close.values, 14)[-1] # Uses 14-sample window
@@ -334,7 +334,7 @@ class Trader:
         try:
             while True:
                 # Ask for 5 min candles
-                data = self.load_historical_data(ticker, interval='5m', period='1d')
+                data = self.load_historical_data(ticker, interval='5m', period='5d')
 
                 # Calculate the STOCHASTIC
                 stoch_k, stoch_d = ti.stoch(data.High.values, data.Low.values, data.Close.values, 9, 6, 9)
@@ -368,7 +368,7 @@ class Trader:
         lg.info('\nChecking stochastic crossing...')
 
         # Ask for 5 min candles
-        data = self.load_historical_data(ticker, interval='5m', period='1d')
+        data = self.load_historical_data(ticker, interval='5m', period='5d')
 
         # Calculate the STOCHASTIC
         stoch_k, stoch_d = ti.stoch(data.High.values, data.Low.values, data.Close.values, 9, 6, 9)
