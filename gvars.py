@@ -1,8 +1,8 @@
 # encoding: utf-8
 
 # REST API
-API_KEY = "PKM8IJ5C5QUIBLCQVD9O"
-API_SECRET_KEY = "09UAi5fe3WouaJrMMsqwO2D1sP4l5cP7yqnRj1Fu"
+API_KEY = "PKQZIS3VID0N34Y5YCGE"
+API_SECRET_KEY = "ua4PLYNh3kZhC3qbjO5zadPRGYvAKcbS52kV3Zdm"
 API_URL = "https://paper-api.alpaca.markets"
 
 # Percentage margin section
